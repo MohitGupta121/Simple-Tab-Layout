@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
       - main
-      - apks
+      - main
 
 jobs:
   build:
