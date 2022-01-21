@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         new TabLayoutMediator(tabLayout, viewPager2, ((tab, position) -> tab.setText(items[position]))).attach();
 
+        // Set Icons on Tab Items
         tabLayout.getTabAt(0).setIcon(tabIcons[0]);
         tabLayout.getTabAt(1).setIcon(tabIcons[1]);
 
