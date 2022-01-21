@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
     ViewPager2 viewPager2;
     private String[] items = new String[]{"Chat", "Status"};
 
+    // Icons For TabItems
+    private int[] tabIcons = {R.drawable.ic_chat_icon, R.drawable.ic_status_icon};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         viewPager2.setAdapter(viewPagerAdapter);
 
         new TabLayoutMediator(tabLayout, viewPager2, ((tab, position) -> tab.setText(items[position]))).attach();
+
+        tabLayout.getTabAt(0).setIcon(tabIcons[0]);
+        tabLayout.getTabAt(1).setIcon(tabIcons[1]);
 
     }
 }
